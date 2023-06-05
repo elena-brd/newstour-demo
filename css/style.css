@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffddd2;
+    color: #181818;
+    padding: 0.5rem 2.2rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #e29578;
+    color: #fff;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    color: #181818;
+    line-height: 1.4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 5rem;
+    margin: 0 auto;
+}
+
+/* navbar */
+#main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+#main-navbar ul {
+    display: flex;
+}
+
+#main-navbar a {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    color: #181818;
+    font-weight: 500;
+}
+
+#main-navbar a:hover {
+    border-bottom: 2px solid #006d77;
+    color: #006d77;
+}
+
+#main-header .showcase {
+    background: url('../img-showcase/paris.jpg') no-repeat center center/cover;
+    height: 70vh;
+    width: 100%;
+}
+
+#main-header .showcase::before {
+    position: absolute;
+    content: '';
+    background: rgba(0, 0, 0, 0.3);
+    height: 70vh;
+    width: 100%;
+
+}
+
+#main-header .showcase h2 {
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 4rem;
+}
+
+/* grid areas */
+#updates h2,
+#lifestyle h2 {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2.2rem;
+}
+
+#updates .grid-columns {
+    display: grid;
+    grid-template-areas:
+        'box-1 box-3'
+        'box-2 box-3';
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+#updates .box-1 {
+    grid-area: box-1;
+    background: url('../img-news/paris.jpg') no-repeat center center/cover;
+    height: 25vh;
+}
+
+#updates .box-2 {
+    grid-area: box-2;
+    background: url('../img-news/berliner-dom.jpg') no-repeat center center/cover;
+    height: 25vh;
+}
+
+#updates .box-3 {
+    grid-area: box-3;
+    background: url('../img-news/city-and-the-jungle.jpg') no-repeat center center/cover;
+    height: 100%;
+}
+
+#updates .box,
+#lifestyle .card {
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+#updates .box:hover,
+#lifestyle .card:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+#updates .box a,
+#lifestyle .card a {
+    font-size: 1.2rem;
+    color: #181818;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    margin: 1rem 0rem;
+    padding: 0.5rem 0;
+}
+
+/* cafe and restaurant section */
+#restaurants-and-cafe .showcase-cafe {
+    background: url('../img-news/morning.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+#restaurants-and-cafe .about-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+#restaurants-and-cafe .about-info h2 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+/* lifestyle section */
+#lifestyle .column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+#lifestyle .card-1 {
+    background: url('../img-news/summer.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+#lifestyle .card-2 {
+    background: url('../img-news/sports-arrivals.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+#lifestyle .card-3 {
+    background: url('../img-news/home-design.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+/* footer */
+#main-footer {
+    background: #006d77;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+@media(max-width:750px) {
+    #main-navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-navbar .navbar ul {
+        margin-top: 1rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #main-navbar .navbar a {
+        font-size: 1rem;
+    }
+
+    #main-header .showcase h2 {
+        text-align: center;
+        font-size: 3.5rem;
+        padding-top: 5rem;
+    }
+
+    #updates .grid-columns,
+    #lifestyle .column {
+        display: block;
+    }
+
+    #updates .box-1,
+    #lifestyle .card-1 {
+        height: 25vh;
+    }
+
+    #updates .box-2,
+    #lifestyle .card-2 {
+        height: 25vh;
+    }
+
+    #updates .box-3,
+    #lifestyle .card-3 {
+        height: 25vh;
+    }
+
+
+}
